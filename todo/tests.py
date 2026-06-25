@@ -42,7 +42,7 @@ class TaskModelTestCase(TestCase):
         response = client.get('/{}/'.format(task.pk))
 
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response.template[0].name, 'todo/detail.html')
+        self.assertContains(response.templates[0].name, 'todo/detail.html')
         self.assertContains(response.context['task'], task)
     
     def test_detail_get_fail(self):
