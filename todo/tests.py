@@ -1,4 +1,4 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 from django.utils import timezone
 from datetime import datetime
 from todo.models import Task
@@ -48,5 +48,5 @@ class TaskModelTestCase(TestCase):
     def test_detail_get_fail(self):
         client = Client()
         response = client.get('/1/')
-        
+
         self.assertEqual(response.status_code, 404)
