@@ -1,4 +1,4 @@
-from django.test import TestCase, Client
+from django.test import TestCase
 from django.utils import timezone
 from datetime import datetime
 from todo.models import Task
